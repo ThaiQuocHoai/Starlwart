@@ -12,11 +12,10 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="./lib/lightbox/css/lightbox.min.css">
+    <link rel="stylesheet" href="./lib/owlcarosel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./lib/owlcarosel/assets/owl.theme.default.min.css">
 </head>
-<!-- 
-<div class="arround_up">
-    <img src="./Images/to-top1.png" alt="">
-</div> -->
+
 
 <body>
     <header>
@@ -37,8 +36,11 @@
     </header>
 
     <section id="carosel">
-        <h1>Business Solutions</h1>
-        <!-- <h1 class="">Build Your Future</h1> -->
+        <div class="owl-carousel owl-theme">
+            <h1 class="item">Business Solutions</h1>
+            <h1 class="item">Build Your Future</h1>
+        </div>
+
         <p>The Leading Comepany Delivering Services of<br /> The Highest Quality</p>
     </section>
 
@@ -181,6 +183,12 @@
         </div>
     </section>
 
+
+    <div class="backtotop">
+        <a href="#" class="cd-top text-replace js-cd-top">
+            <i class="fa fa-arrow-up"></i></a>
+    </div>
+
     <footer>
         <div class="footer__list">
             <div class="footer__item">
@@ -205,24 +213,53 @@
             <div class="footer__item item3">
                 <h3>Newsletter</h3>
                 <p>It was popularised in the 1960s with the release Ipsum.</p>
-                <input style="margin: 0; padding: 12px 10px;" size="22" type="text"  placeholder="  Enter Email"><button>Go</button>
+                <input style="margin: 0; padding: 12px 10px;" size="22" type="text"
+                    placeholder="  Enter Email"><button>Go</button>
             </div>
             <div class="footer__out">
-                <a href="./index.html"><h1>Starlwart</h1></a>
-                <p>© 2017 Stalwart. All rights  Reserved | Design by &nbsp;<a href="http://w3layouts.com">W3Layouts</a></p>
+                <a href="./index.html">
+                    <h1>Starlwart</h1>
+                </a>
+                <p>© 2017 Stalwart. All rights Reserved | Design by &nbsp;<a href="http://w3layouts.com">W3Layouts</a>
+                </p>
             </div>
         </div>
-        
+
     </footer>
 
 
     <script src="./lib/lightbox/js/lightbox.js"></script>
     <script src="./lib/lightbox/js/lightbox-plus-jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+    <script src="./lib/owlcarosel/owl.carousel.min.js"></script>
+
+
     <script>
         lightbox.option({
             'resizeDuration': 200,
             'wrapAround': true
         })
+    </script>
+    <script src="./lib/backtotop/js/util.js"></script>
+    <script src="./lib/backtotop/js/main.js"></script>
+
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            padding: 0,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            dots: false,
+            smartSpeed: 250,
+            animateIn: true
+        });
     </script>
 
 </body>
